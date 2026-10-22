@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3BHK Luxury Residence | Jolly Maker 1, Cuffe Parade</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #131926;
+            --bg-card: #182030;
+            --accent-gold: #d4af37;
+            --accent-gold-hover: #f3e5ab;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(212, 175, 55, 0.25);
+            --border-light: rgba(255, 255, 255, 0.08);
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-light);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            letter-spacing: 1px;
+        }
+
+        .gold-text {
+            color: var(--accent-gold);
+        }
+
+        /* Header / Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(11, 15, 25, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 1000;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .brand-logo span {
+            color: var(--accent-gold);
+        }
+
+        .header-cta {
+            background: linear-gradient(135deg, #d4af37, #aa7c11);
+            color: #000;
+            padding: 0.6rem 1.4rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header-cta:hover {
+            background: var(--accent-gold-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, rgba(11, 15, 25, 0.4) 0%, rgba(11, 15, 25, 0.95) 100%),
+                        url('Jollymaker 1.jpg') center/cover no-repeat;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 0.4rem 1.2rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 1.5rem;
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero p.location {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* Highlight Grid */
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            background: rgba(24, 32, 48, 0.8);
+            border: 1px solid var(--border-light);
+            padding: 1.5rem 1rem;
+            border-radius: 6px;
+            backdrop-filter: blur(8px);
+        }
+
+        .stat-card i {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card .value {
+            font-size: 1.3rem;
+            font-weight: 600;
+            font-family: var(--font-heading);
+            color: var(--text-light);
+        }
+
+        .stat-card .label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.2rem;
+        }
+
+        /* Banner Dates */
+        .dates-banner {
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+            border-y: 1px solid var(--border-color);
+            padding: 1.2rem 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .date-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .date-item i {
+            color: var(--accent-gold);
+        }
+
+        /* Main Section Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 0.95rem;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: var(--accent-gold);
+            margin: 1rem auto;
+        }
+
+        /* Overview Details */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .overview-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .key-specs-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .key-specs-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .key-specs-list li i {
+            color: var(--accent-gold);
+            width: 20px;
+        }
+
+        /* Photo Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            background: var(--bg-card);
+            cursor: pointer;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background: linear-gradient(0deg, rgba(11, 15, 25, 0.9) 0%, transparent 100%);
+            color: var(--text-light);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Amenities Grid */
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .amenity-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            padding: 2rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .amenity-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .amenity-card i {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+
+        .amenity-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .amenity-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Lease Specifications Terms Box */
+        .terms-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .rent-price {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            color: var(--accent-gold);
+            margin: 1rem 0;
+        }
+
+        .rent-period {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-family: var(--font-body);
+        }
+
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .term-item h4 {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .term-item p {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-top: 0.2rem;
+        }
+
+        /* WhatsApp Contact Box */
+        .cta-section {
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            border-top: 1px solid var(--border-light);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .whatsapp-btn-main {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #25d366;
+            color: #fff;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .whatsapp-btn-main:hover {
+            background: #1eb954;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+            z-index: 10000;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #1eb954;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-primary);
+            border-top: 1px solid var(--border-light);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .overview-grid { grid-template-columns: 1fr; }
+            .key-specs-list { grid-template-columns: 1fr; }
+            .terms-box { padding: 1.8rem; }
+            .rent-price { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="brand-logo">Jolly Maker 1 <span>| Cuffe Parade</span></div>
+        <a href="https://wa.me/14044321488?text=Hello,%20I%20am%20an%20agent%20and%20have%20a%20company%20lease%20client,%20who%20would%20be%20interested%20in%20the%203BHK%20at%20Jolly%20Maker%201,%20Cuffe%20Parade.%20Can%20we%20connect%3F" class="header-cta" target="_blank">
+            <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+        </a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Exclusive Corporate Lease</span>
+            <h1>3BHK Luxury Residence</h1>
+            <p class="location">23rd Floor • Jolly Maker 1 • Cuffe Parade, South Mumbai</p>
+            
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <i class="fas fa-ruler-combined"></i>
+                    <div class="value">1,615</div>
+                    <div class="label">Square Feet</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-bed"></i>
+                    <div class="value">3 BHK</div>
+                    <div class="label">+ 1 Servant Room</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-bath"></i>
+                    <div class="value">3 + 1</div>
+                    <div class="label">Bathrooms</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-water"></i>
+                    <div class="value">Sea View</div>
+                    <div class="label">From Every Room</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Viewing Availability Banner -->
+    <div class="dates-banner">
+        <div class="date-item">
+            <i class="far fa-calendar-check"></i>
+            <span><strong>Viewings Available:</strong> Starting November 8</span>
+        </div>
+        <div class="date-item">
+            <i class="far fa-clock"></i>
+            <span><strong>Expected Lease Start:</strong> December 1</span>
+        </div>
+    </div>
+
+    <!-- Overview Section -->
+    <section class="container">
+        <div class="overview-grid">
+            <div class="overview-text">
+                <h2 style="font-size: 2rem; margin-bottom: 1rem;">Refined High-Rise Living</h2>
+                <div class="divider" style="margin: 0 0 1.5rem 0;"></div>
+                <p>Situated on the 23rd floor of the prestigious Jolly Maker 1 in Cuffe Parade, this residence represents South Mumbai luxury living at its finest. Fully renovated in 2017 and maintained in absolute mint condition.</p>
+                <p>Designed strictly for corporate master-leases, the residence offers panoramic, unobstructed views of the Arabian Sea from every room, including the kitchen and all bathrooms.</p>
+                
+                <ul class="key-specs-list">
+                    <li><i class="fas fa-check-circle"></i> 1,615 Sq. Ft. Layout</li>
+                    <li><i class="fas fa-check-circle"></i> High Floor (23rd Floor)</li>
+                    <li><i class="fas fa-check-circle"></i> 3 Attached Bathrooms</li>
+                    <li><i class="fas fa-check-circle"></i> Separate Servant Room & Bath</li>
+                    <li><i class="fas fa-check-circle"></i> Bose Home Theatre System</li>
+                    <li><i class="fas fa-check-circle"></i> Fully Furnished Interiors</li>
+                </ul>
+            </div>
+            <div>
+                <img src="PHOTO-2026-10-21-22-09-38_7.jpg" alt="Living Room" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-light);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="container">
+        <div class="section-header">
+            <h2>Residence Gallery</h2>
+            <div class="divider"></div>
+            <p>Actual photos of the residence interior and building</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="Jollymaker 1.jpg" alt="Jolly Maker 1 Exterior">
+                <div class="gallery-caption">Jolly Maker 1 Building Tower</div>
+            </div>
+            <div class="gallery-item">
+                <img src="PHOTO-2026-10-21-22-09-38_7.jpg" alt="Living Area">
+                <div class="gallery-caption">Living & Media Lounge</div>
+            </div>
+            <div class="gallery-item">
+                <img src="PHOTO-2026-10-21-22-09-38_4.jpg" alt="Master Suite">
+                <div class="gallery-caption">Master Bedroom Suite</div>
+            </div>
+            <div class="gallery-item">
+                <img src="PHOTO-2026-10-21-22-09-38.jpg" alt="Foyer">
+                <div class="gallery-caption">Private Foyer & Hallway</div>
+            </div>
+            <div class="gallery-item">
+                <img src="PHOTO-2026-10-21-22-09-38_1.jpg" alt="Dark Marble Bathroom">
+                <div class="gallery-caption">Dark Italian Marble Washroom</div>
+            </div>
+            <div class="gallery-item">
+                <img src="PHOTO-2026-10-21-22-09-38_6.jpg" alt="Glass Shower Bathroom">
+                <div class="gallery-caption">En-suite Glass Shower Bathroom</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities & Equipment -->
+    <section class="container">
+        <div class="section-header">
+            <h2>Equipped Premium Amenities</h2>
+            <div class="divider"></div>
+            <p>Fully move-in ready for corporate executives</p>
+        </div>
+
+        <div class="amenities-grid">
+            <div class="amenity-card">
+                <i class="fas fa-tv"></i>
+                <h3>Entertainment</h3>
+                <p>2 Flat-screen TVs integrated with Bose Home Theatre Surround Sound system.</p>
+            </div>
+            <div class="amenity-card">
+                <i class="fas fa-soap"></i>
+                <h3>Kitchen & Laundry</h3>
+                <p>Fully equipped with Dishwasher, LG Refrigerator, Samsung Washing Machine & Dryer.</p>
+            </div>
+            <div class="amenity-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>24/7 Security</h3>
+                <p>Premier security infrastructure and concierge within South Mumbai's top residential complex.</p>
+            </div>
+            <div class="amenity-card">
+                <i class="fas fa-user-tie"></i>
+                <h3>Servant Quarter</h3>
+                <p>Dedicated servant room with an independent attached bathroom for resident staff.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commercial Lease Terms -->
+    <section class="container">
+        <div class="terms-box">
+            <span class="hero-badge">Commercial Specifications</span>
+            <div class="rent-price">₹7.00 Lakhs <span class="rent-period">/ month</span></div>
+            <p style="color: var(--accent-gold); font-weight: 500;">Company Lease Only</p>
+
+            <div class="terms-grid">
+                <div class="term-item">
+                    <h4>Lock-in Period</h4>
+                    <p>Minimum 2 Years</p>
+                </div>
+                <div class="term-item">
+                    <h4>Parking</h4>
+                    <p>No Parking Included</p>
+                </div>
+                <div class="term-item">
+                    <h4>Condition</h4>
+                    <p>Mint Condition (Renovated 2017)</p>
+                </div>
+                <div class="term-item">
+                    <h4>Furnishing</h4>
+                    <p>Fully Furnished</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="cta-section">
+        <div class="container" style="padding: 0;">
+            <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Inquire for Corporate Lease</h2>
+            <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto;">Connect directly via WhatsApp to arrange viewings or discuss lease terms.</p>
+            
+            <a href="https://wa.me/14044321488?text=Hello,%20I%20am%20an%20agent%20and%20have%20a%20company%20lease%20client,%20who%20would%20be%20interested%20in%20the%203BHK%20at%20Jolly%20Maker%201,%20Cuffe%20Parade.%20Can%20we%20connect%3F" class="whatsapp-btn-main" target="_blank">
+                <i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i> Connect via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/14044321488?text=Hello,%20I%20am%20an%20agent%20and%20have%20a%20company%20lease%20client,%20who%20would%20be%20interested%20in%20the%203BHK%20at%20Jolly%20Maker%201,%20Cuffe%20Parade.%20Can%20we%20connect%3F" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>Jolly Maker 1, Cuffe Parade, South Mumbai • Company Lease Inquiries</p>
+    </footer>
+
+</body>
+</html>

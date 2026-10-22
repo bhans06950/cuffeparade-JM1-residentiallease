@@ -185,7 +185,8 @@
         /* Banner Dates */
         .dates-banner {
             background: linear-gradient(90deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
-            border-y: 1px solid var(--border-color);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
             padding: 1.2rem 2rem;
             text-align: center;
             display: flex;
@@ -274,10 +275,25 @@
             width: 20px;
         }
 
-        /* Photo Gallery Grid */
+        /* Photo Gallery Sections */
+        .room-group {
+            margin-bottom: 4rem;
+        }
+
+        .room-title {
+            font-size: 1.4rem;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
         }
 
@@ -549,34 +565,86 @@
         </div>
     </section>
 
-    <!-- Photo Gallery -->
+    <!-- Photo Gallery Categorized by Room -->
     <section class="container">
         <div class="section-header">
             <h2>Residence Gallery</h2>
             <div class="divider"></div>
-            <p>Actual photos of the residence interior and building</p>
+            <p>Comprehensive layout tour organized room by room</p>
         </div>
 
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="PHOTO-2026-10-21-22-09-38_7.jpg" alt="Living Area">
-                <div class="gallery-caption">Living & Media Lounge</div>
+        <!-- Foyer & Entryway -->
+        <div class="room-group">
+            <div class="room-title"><i class="fas fa-door-open"></i> Private Foyer & Entryway</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="PHOTO-2026-10-21-22-09-38.jpg" alt="Foyer Entrance">
+                    <div class="gallery-caption">Private Foyer & Entrance Hall</div>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="PHOTO-2026-10-21-22-09-38_4.jpg" alt="Master Suite">
-                <div class="gallery-caption">Master Bedroom Suite</div>
+        </div>
+
+        <!-- Living & Dining -->
+        <div class="room-group">
+            <div class="room-title"><i class="fas fa-couch"></i> Living & Media Lounge</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="PHOTO-2026-10-21-22-09-38_7.jpg" alt="Living Room Lounge">
+                    <div class="gallery-caption">Spacious Living & Entertainment Lounge</div>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="PHOTO-2026-10-21-22-09-38.jpg" alt="Foyer">
-                <div class="gallery-caption">Private Foyer & Hallway</div>
+        </div>
+
+        <!-- Master Suite -->
+        <div class="room-group">
+            <div class="room-title"><i class="fas fa-bed"></i> Master Bedroom & En-Suite</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="PHOTO-2026-10-21-22-09-38_4.jpg" alt="Master Bedroom Bed">
+                    <div class="gallery-caption">Master Bedroom Suite</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="PHOTO-2026-10-21-22-09-38_3.jpg" alt="Master Bedroom Wardrobes">
+                    <div class="gallery-caption">Custom Mirror Wardrobes & Storage</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="PHOTO-2026-10-21-22-09-38_2.jpg" alt="Master Bedroom Desk">
+                    <div class="gallery-caption">Master Suite Workspace & Dresser</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="PHOTO-2026-10-21-22-09-38_1.jpg" alt="Master Bathroom Washroom">
+                    <div class="gallery-caption">Master En-Suite Dark Italian Marble Sink</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="PHOTO-2026-10-21-22-09-38_9.jpg" alt="Master Shower">
+                    <div class="gallery-caption">Master En-Suite Glass Shower Enclosure</div>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="PHOTO-2026-10-21-22-09-38_1.jpg" alt="Dark Marble Bathroom">
-                <div class="gallery-caption">Dark Italian Marble Washroom</div>
+        </div>
+
+        <!-- Guest Suite 1 -->
+        <div class="room-group">
+            <div class="room-title"><i class="fas fa-hotel"></i> Guest Suite 1 & Bath</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="PHOTO-2026-10-21-22-09-38_6.jpg" alt="Guest Bathroom 1 Sink">
+                    <div class="gallery-caption">Guest Suite 1 Marble Washbasin & Glass Shower</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="PHOTO-2026-10-21-22-09-38_5.jpg" alt="Guest Bathroom 1 Toilet">
+                    <div class="gallery-caption">Guest Suite 1 Fixtures & Finishes</div>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="PHOTO-2026-10-21-22-09-38_6.jpg" alt="Glass Shower Bathroom">
-                <div class="gallery-caption">En-suite Glass Shower Bathroom</div>
+        </div>
+
+        <!-- Guest Suite 2 -->
+        <div class="room-group">
+            <div class="room-title"><i class="fas fa-person-booth"></i> Guest Suite 2 & Bath</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="PHOTO-2026-10-21-22-09-38_8.jpg" alt="Guest Foyer Hallway">
+                    <div class="gallery-caption">Corridor leading to Guest Suite 2</div>
+                </div>
             </div>
         </div>
     </section>
